@@ -1,2 +1,2 @@
-cp ~/.vimrc `pwd`/.vimrc
+cp ~/.vimrc `pwd`/vimrc
 git add . && git commit -m "latest" && git push https://www.github.com/ryanwholey/vimrc.git master

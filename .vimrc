@@ -1,46 +1,38 @@
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
 
-"~* Vundle Bundles *~
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
+Plugin 'w0ng/vim-hybrid'
+Plugin 'scrooloose/syntastic'
+Plugin 'othree/yajs.vim'
+Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
+Plugin 'rking/ag.vim'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Raimondi/delimitMate'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'kien/ctrlp.vim'
 
-Bundle 'gmarik/vundle'
-
-Bundle 'scrooloose/syntastic'
-Bundle 'othree/yajs.vim'
-Bundle 'mxw/vim-jsx'
-Bundle 'pangloss/vim-javascript'
-"Bundle 'morhetz/gruvbox'
-Bundle 'rking/ag.vim'
-Bundle 'flazz/vim-colorschemes'
-Bundle 'scrooloose/nerdtree'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'bling/vim-airline'
-Bundle 'tpope/vim-fugitive'
-Bundle 'Raimondi/delimitMate'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'kien/ctrlp.vim'
-
-"~* Config ~*
-set ignorecase
-set smartcase
-set number
-set expandtab
-set shiftwidth=4
-set softtabstop=4
+call vundle#end()
 filetype plugin indent on
 
 imap jj <ESC>
 command NT NERDTree .
-imap <C-l> <ESC>lxa
 
 "~* Color and stuff ~*
 syntax enable
-set t_Co=256
-colorscheme hybrid 
+colorscheme hybrid
+
 
 highlight Normal ctermbg=8
 
-"~* Syntastic Linting *~
+""~* Syntastic Linting *~
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -57,20 +49,17 @@ set ttimeoutlen=50
 "~* Ag *~
 let g:ag_working_path_mode="r"
 
-"~* Ag *~
+"~* NERDTREE  *~
 let NERDTreeIgnore = ['\.pyc$']
-
-"~* Use .exrc for local vim config *~
-set exrc
-set secure
 
 "~* nerd commenter*~
 filetype plugin on
 set exrc
 
-"~* ctrl p *~
+""~* ctrl p *~
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|*.py'
 
 map <C-j> 0v$xojjPjddk0
 map <C-k> 0v$xkOjjPjddk0
+
 
